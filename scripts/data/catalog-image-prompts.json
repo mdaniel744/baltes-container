@@ -1,0 +1,91 @@
+{
+  "generator": "Built-in image_gen",
+  "purpose": "Illustrative sample catalog and homepage category images",
+  "images": [
+    {
+      "name": "10-foot",
+      "file": "public/images/catalog/10-foot.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a compact 10-foot shipping container, bright traffic red painted corrugated steel, realistic short proportions, closed double cargo doors with locking bars and lockbox visible, clean new condition. One container only. Three-quarter view showing the long side and door end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "20-foot",
+      "file": "public/images/catalog/20-foot.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a standard 20-foot ISO shipping container, deep traffic red painted corrugated steel, correct 6-meter length proportions, closed double cargo doors with locking bars and lockbox visible, clean one-trip condition. One container only. Three-quarter view showing the long side and door end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "40-foot",
+      "file": "public/images/catalog/40-foot.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a long 40-foot standard height ISO shipping container, slate gray corrugated steel, correct long 12-meter proportions and standard 2.6m height, closed cargo doors visible, clean condition. One container only. Three-quarter view showing the long side and door end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "storage",
+      "file": "public/images/catalog/storage.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a 20-foot storage container, light neutral gray corrugated steel, one double cargo door end swung open to reveal empty wooden floor interior, practical secure site storage, corner castings, clean new condition. One container only. Three-quarter view showing the long side and door end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "office",
+      "file": "public/images/catalog/office.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product image. Photorealistic studio catalog photograph of a 20-foot modular office container, clean white insulated panel walls with anthracite steel frame, two large rectangular windows and single personnel door on long side, flat roof, no cargo doors. One container only. Three-quarter view showing the long side and end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "sanitary",
+      "file": "public/images/catalog/sanitary.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product image. Photorealistic studio catalog photograph of a 20-foot modular sanitary container, clean white insulated panel walls with anthracite steel frame, three separate personnel doors and small high frosted windows with ventilation grilles, flat roof, no cargo doors. One container only. Three-quarter view showing the long side and end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "workshop",
+      "file": "public/images/catalog/workshop.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product image. Photorealistic studio catalog photograph of a 30-foot converted workshop shipping container, slate gray corrugated steel with a large roller shutter open on the long side, empty workshop interior and a side personnel door, correct long 9-meter proportions. One container only. Three-quarter view showing the long side and end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "compact",
+      "file": "public/images/catalog/compact.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product image. Photorealistic studio catalog photograph of a very compact 8-foot secure storage container, gray corrugated steel, closed double doors with locking bars and forklift pockets, nearly cubic dimensions, new condition. One container only. Three-quarter view showing the long side and end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "dry-interior",
+      "file": "public/images/catalog/dry-interior.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product gallery secondary image. Photorealistic photograph of a standard dry shipping container interior, pale neutral gray corrugated steel walls and ceiling with a clean plywood floor, empty, daylight from the open doorway behind the camera, looking straight toward the far closed wall. Landscape 4:3, realistic straight architectural perspective, neutral white light, crisp material details, no pink or warm hue. No people, no text, no logos, no watermarks. This is an illustrative interior view for a container store demo."
+    },
+    {
+      "name": "reefer-interior",
+      "file": "public/images/catalog/reefer-interior.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product gallery secondary image. Photorealistic photograph of a white refrigerated shipping container interior, clean white insulated walls and ceiling, aluminum T-profile grooved floor, empty, looking from its open cargo doorway toward the far end. Landscape 4:3, realistic straight architectural perspective, neutral white light, crisp material details, no pink or warm hue. No people, no text, no logos, no watermarks. This is an illustrative interior view for a container store demo."
+    },
+    {
+      "name": "office-interior",
+      "file": "public/images/catalog/office-interior.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product gallery secondary image. Photorealistic photograph of a modular office container interior, bright white insulated panel walls, two anthracite framed windows along a side wall, light gray vinyl floor, modest white desk and chair, electrical sockets, looking from its personnel doorway. Landscape 4:3, realistic straight architectural perspective, neutral white light, crisp material details, no pink or warm hue. No people, no text, no logos, no watermarks. This is an illustrative interior view for a container store demo."
+    },
+    {
+      "name": "sanitary-interior",
+      "file": "public/images/catalog/sanitary-interior.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product gallery secondary image. Photorealistic photograph of one compartment of a modular sanitary container, bright white washable walls, small high frosted window, wall mounted white washbasin, toilet cubicle and anti-slip gray wet-room floor, clean realistic utility fittings. Landscape 4:3, realistic straight architectural perspective, neutral white light, crisp material details, no pink or warm hue. No people, no text, no logos, no watermarks. This is an illustrative interior view for a container store demo."
+    },
+    {
+      "name": "workshop-interior",
+      "file": "public/images/catalog/workshop-interior.png",
+      "prompt": "Use case: product-mockup. Asset type: sample product gallery secondary image. Photorealistic photograph of a converted container workshop interior, gray ribbed steel walls, gray steel checker-plate floor, simple steel workbench against the far wall, empty workshop with no tools or people, daylight from open roller door behind the camera. Landscape 4:3, realistic straight architectural perspective, neutral white light, crisp material details, no pink or warm hue. No people, no text, no logos, no watermarks. This is an illustrative interior view for a container store demo."
+    },
+    {
+      "name": "high-cube",
+      "file": "public/images/catalog/high-cube.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a 40-foot high cube shipping container with visibly taller 2.9-meter height, deep navy blue corrugated steel, correct long 12-meter proportions, closed double cargo doors and corner castings, clean one-trip condition. One container only. Three-quarter view showing the long side and distinctive short end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "reefer",
+      "file": "public/images/catalog/reefer.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a 20-foot refrigerated shipping container, white insulated corrugated steel, prominent realistic exposed refrigeration machinery and fan unit on the short end facing camera, aluminum floor, clean condition. One container only. Three-quarter view showing the long side and distinctive short end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "open-side",
+      "file": "public/images/catalog/open-side.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a 20-foot full side-opening shipping container, traffic red corrugated steel, all long-side hinged doors fully folded open so the entire empty wooden interior is visible, corner posts intact, clean new condition. One container only. Three-quarter view showing the long side and distinctive short end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    },
+    {
+      "name": "used",
+      "file": "public/images/catalog/used.png",
+      "prompt": "Use case: product-mockup. Asset type: website category banner and sample product image. Photorealistic studio catalog photograph of a used 20-foot shipping container, faded dark blue corrugated steel, modest weathered patina, small surface rust marks near bottom edges and subtle dents but sound intact structure, closed double cargo doors visible. One container only. Three-quarter view showing the long side and distinctive short end, entire container fully visible with generous 12% whitespace margins, centered on a pure white seamless background and floor. Soft neutral daylight, crisp steel details, subtle realistic contact shadow, true neutral whites with no pink tint. Landscape 4:3 composition. No people, no text, no logos, no labels, no watermarks, no surrounding objects."
+    }
+  ]
+}

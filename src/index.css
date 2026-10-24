@@ -4,30 +4,30 @@
 
 @layer base {
   :root {
-    /* Industrial Light — Steel & Amber Palette */
-    --background: 0 0% 98%;          /* #FAFAFA Off-White */
-    --foreground: 0 0% 12%;           /* #1F1F1F Charcoal */
-    --card: 0 0% 100%;                /* #FFFFFF White */
+    /* White canvas with a brighter, matte violet inspired by the Baltes logo. */
+    --background: 0 0% 100%;          /* #FFFFFF */
+    --foreground: 0 0% 12%;           /* #1F1F1F */
+    --card: 0 0% 100%;
     --card-foreground: 0 0% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 12%;
-    --primary: 38 92% 45%;            /* #E89008 Safety Amber */
+    --primary: 264 33.333% 47.059%;    /* #7050A0 Matte violet */
     --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 94%;            /* #F0F0F0 Light Grey */
+    --secondary: 0 0% 96%;            /* #F5F5F5 Neutral */
     --secondary-foreground: 0 0% 12%;
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 40%;     /* #666666 Slate Grey */
-    --accent: 0 0% 90%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 0 0% 92%;
     --accent-foreground: 0 0% 12%;
-    --destructive: 0 72% 51%;
+    --destructive: 353 78% 46%;
     --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 85%;               /* #D9D9D9 Light Steel */
-    --input: 0 0% 90%;
-    --ring: 38 92% 45%;
-    --success: 136 36% 30%;           /* #3D7A33 Forest Cargo */
+    --border: 0 0% 91%;
+    --input: 0 0% 95%;
+    --ring: 264 33.333% 47.059%;
+    --success: 145 42% 30%;
     --success-foreground: 0 0% 100%;
 
-    --radius: 0.25rem;
+    --radius: 0rem;
     --font-heading: 'Manrope', ui-sans-serif, system-ui, sans-serif;
     --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
     --font-display: 'Manrope', ui-sans-serif, system-ui, sans-serif;
@@ -44,17 +44,33 @@
   }
   body {
     @apply bg-background text-foreground font-body antialiased;
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.6;
   }
   ::selection {
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
   }
-  /* Focus states — 3px Safety Amber outline */
+  /* Clear keyboard focus using the brand accent. */
   *:focus-visible {
     outline: 3px solid hsl(var(--primary));
     outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .section-space {
+    @apply py-10 md:py-14;
+  }
+  .page-heading-space {
+    @apply py-8 md:py-10;
+  }
+}
+
+/* Keep mobile form text readable and prevent automatic input zoom. */
+@media (max-width: 767px) {
+  :root :is(input, select, textarea) {
+    font-size: 1rem;
   }
 }
 
@@ -64,8 +80,8 @@
     letter-spacing: 0.02em;
   }
   .steel-rule {
-    border-color: hsl(0 0% 20%);
-    border-width: 0.5px;
+    border-color: hsl(var(--primary) / 0.16);
+    border-width: 1px;
   }
   .text-balance {
     text-wrap: balance;
@@ -73,8 +89,13 @@
   /* Grid pattern background for configurator */
   .blueprint-grid {
     background-image:
-      linear-gradient(rgba(45, 90, 150, 0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(45, 90, 150, 0.08) 1px, transparent 1px);
+      linear-gradient(hsl(var(--primary) / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.045) 1px, transparent 1px);
     background-size: 32px 32px;
+  }
+  button,
+  a,
+  img {
+    border-radius: 0 !important;
   }
 }

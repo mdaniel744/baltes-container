@@ -12,6 +12,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+.next
+out
+*.tsbuildinfo
 dist
 dist-ssr
 *.local

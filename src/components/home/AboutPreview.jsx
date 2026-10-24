@@ -1,44 +1,40 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router";
 import { ArrowRight } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { IMAGES } from "@/lib/images";
+import { useLocale } from "@/lib/i18n/LocaleContext";
+import { getHomeContent } from "@/lib/i18n/homeContent";
 
 export default function AboutPreview() {
+  const { locale } = useLocale();
+  const copy = getHomeContent(locale).about;
+
   return (
-    <section className="py-24 border-b border-border">
+    <section className="section-space">
       <div className="max-w-terminal mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="relative">
-            <div className="aspect-[4/3] overflow-hidden bg-secondary border border-border">
-              <Image src={IMAGES.delivery} alt="Containerlieferung mit Lkw und Kran" fittingType="fill" className="w-full h-full object-cover" />
+            <div className="aspect-[4/3] overflow-hidden bg-secondary shadow-[0_18px_45px_rgba(0,0,0,0.10)]">
+              <Image src={IMAGES.container20} alt={copy.imageAlt} fittingType="fill" loading="lazy" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-primary text-primary-foreground p-6 max-w-[200px]">
               <div className="font-heading text-4xl font-extrabold">1983</div>
-              <div className="text-sm font-medium mt-1">Gegründet im Februar 1983</div>
+              <div className="text-sm font-medium mt-1">{copy.founded}</div>
             </div>
           </div>
 
           <div>
             <SectionHeading
-              eyebrow="Über Baltes Container"
-              title="Containerlösungen mit Erfahrung seit 1983"
+              title={copy.title}
             />
             <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Baltes Container wurde im Februar 1983 gegründet und ist auf den Verkauf neuer und gebrauchter Container spezialisiert. Seitdem unterstützen wir Unternehmen, öffentliche Auftraggeber und Privatkunden bei der Auswahl geeigneter Lösungen für Lagerung, Transport und individuelle Projekte.
-              </p>
-              <p>
-                Durch unsere langjährigen Beziehungen zu Reedereien und Containerleasinggesellschaften erhalten wir Zugang zu einem breiten Bestand unterschiedlicher Container. Unsere Einkaufserfahrung hilft uns, marktgerechte Preise, verlässliche Verfügbarkeit und passende Lösungen für unterschiedliche Anforderungen anzubieten.
-              </p>
-              <p>
-                Unser Anspruch ist nicht, irgendeinen Container zu verkaufen. Wir möchten den Container liefern, der hinsichtlich Größe, Zustand, Ausstattung, Einsatzbereich und Budget tatsächlich zu Ihrem Vorhaben passt.
-              </p>
+              {copy.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
             </div>
             <Link to="/ueber-uns" className="mt-8 group inline-flex items-center gap-2 text-sm font-bold text-primary">
-              Mehr über Baltes Container
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              {copy.cta}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-foreground" />
             </Link>
           </div>
         </div>

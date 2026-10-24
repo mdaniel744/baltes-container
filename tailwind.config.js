@@ -1,9 +1,24 @@
+import tailwindcssAnimate from "tailwindcss-animate";
+
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
     darkMode: ["class"],
-    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+    content: ["./src/**/*.{ts,tsx,js,jsx,mdx}"],
   theme: {
   	extend: {
+      fontSize: {
+        xs: ['0.75rem', { lineHeight: '1rem' }],
+        sm: ['0.8125rem', { lineHeight: '1.25rem' }],
+        base: ['0.9375rem', { lineHeight: '1.5rem' }],
+        lg: ['1rem', { lineHeight: '1.5rem' }],
+        xl: ['1.125rem', { lineHeight: '1.625rem' }],
+        '2xl': ['1.375rem', { lineHeight: '1.875rem' }],
+        '3xl': ['1.75rem', { lineHeight: '2.125rem' }],
+        '4xl': ['2rem', { lineHeight: '2.375rem' }],
+        '5xl': ['2.5rem', { lineHeight: '1.15' }],
+        '6xl': ['3rem', { lineHeight: '1.1' }],
+        '7xl': ['3.25rem', { lineHeight: '1.1' }],
+      },
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
@@ -85,5 +100,7 @@ module.exports = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 }
+
+export default config;

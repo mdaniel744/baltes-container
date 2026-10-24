@@ -1,0 +1,121 @@
+{
+  "name": "StoreOrder",
+  "type": "object",
+  "properties": {
+    "order_number": {
+      "type": "string",
+      "description": "Customer-facing order reference"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Eingegangen", "Zahlung ausstehend", "In Bearbeitung", "Bezahlt", "Storniert"],
+      "default": "Eingegangen"
+    },
+    "payment_status": {
+      "type": "string",
+      "enum": ["Ausstehend", "Bezahlt", "Fehlgeschlagen", "Erstattet"],
+      "default": "Ausstehend"
+    },
+    "locale": {
+      "type": "string",
+      "enum": ["de", "nl", "cs"],
+      "default": "de"
+    },
+    "customer_type": {
+      "type": "string",
+      "enum": ["Privatkunde", "Geschäftskunde"]
+    },
+    "billing_name": { "type": "string" },
+    "billing_company": { "type": "string" },
+    "billing_email": { "type": "string", "format": "email" },
+    "billing_phone": { "type": "string" },
+    "billing_vat_number": { "type": "string" },
+    "billing_address": { "type": "string" },
+    "billing_postcode": { "type": "string" },
+    "billing_city": { "type": "string" },
+    "billing_country": { "type": "string" },
+    "delivery_same_as_billing": { "type": "boolean", "default": true },
+    "delivery_name": { "type": "string" },
+    "delivery_company": { "type": "string" },
+    "delivery_address": { "type": "string" },
+    "delivery_postcode": { "type": "string" },
+    "delivery_city": { "type": "string" },
+    "delivery_country": { "type": "string" },
+    "payment_method": {
+      "type": "string",
+      "enum": ["Banküberweisung", "Rechnung"]
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": { "type": "string" },
+          "slug": { "type": "string" },
+          "sku": { "type": "string" },
+          "title": { "type": "string" },
+          "unit_price": { "type": "number" },
+          "catalog_price_gross_de": { "type": "number" },
+          "unit_price_net": { "type": "number" },
+          "quantity": { "type": "integer" },
+          "line_total": { "type": "number" },
+          "line_net": { "type": "number" },
+          "vat_rate": { "type": "number" },
+          "vat_amount": { "type": "number" },
+          "currency": { "type": "string" }
+        }
+      }
+    },
+    "items_total": { "type": "number" },
+    "catalog_gross_total_de": { "type": "number" },
+    "goods_net_total": { "type": "number" },
+    "delivery_estimate_net": { "type": "number" },
+    "vat_country": {
+      "type": "string",
+      "enum": ["DE", "CZ", "NL"]
+    },
+    "vat_rate": { "type": "number" },
+    "vat_amount": { "type": "number" },
+    "order_total": { "type": "number" },
+    "currency": { "type": "string", "default": "EUR" },
+    "delivery_cost_status": {
+      "type": "string",
+      "enum": ["Geschätzt", "Bestätigt"],
+      "default": "Geschätzt"
+    },
+    "customer_note": { "type": "string" },
+    "terms_accepted": { "type": "boolean" }
+  },
+  "required": [
+    "order_number",
+    "customer_type",
+    "billing_name",
+    "billing_email",
+    "billing_phone",
+    "billing_address",
+    "billing_postcode",
+    "billing_city",
+    "billing_country",
+    "delivery_name",
+    "delivery_address",
+    "delivery_postcode",
+    "delivery_city",
+    "delivery_country",
+    "payment_method",
+    "items",
+    "items_total",
+    "goods_net_total",
+    "delivery_estimate_net",
+    "vat_country",
+    "vat_rate",
+    "vat_amount",
+    "order_total",
+    "terms_accepted"
+  ],
+  "rls": {
+    "create": true,
+    "read": { "user_condition": { "role": "admin" } },
+    "update": { "user_condition": { "role": "admin" } },
+    "delete": { "user_condition": { "role": "admin" } }
+  }
+}

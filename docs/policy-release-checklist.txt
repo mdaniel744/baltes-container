@@ -1,0 +1,97 @@
+BALTES POLICY RELEASE CHECKLIST
+
+Status: Local working drafts, not approved legal documents. No production
+deployment, external messages, real orders or payments are authorized by this work.
+Keep LEGAL_REVIEW_REQUIRED enabled until the following checks are resolved.
+
+OWNER-CONFIRMED IN THIS CHAT
+- Keep the additional 30-day return offer for standard containers.
+- Baltes pays return freight when the customer is eligible for return.
+- Managing director: Thomas Wolfgang.
+- VAT number: 137858974, formatted DE137858974 using the existing German prefix.
+- Existing legal name: Baltes Container GmbH.
+
+BUSINESS AND LEGAL REVIEW BEFORE PUBLICATION
+- Supply register court and HRB number. Confirm the existing Wadgassen address
+  is the company's address for legal service, not merely a contact/depot address.
+- Confirm the required consumer-dispute-resolution statement; do not assume
+  participation, exemption or non-participation from a reference company's text.
+- The 30-day window retains the prior site's start point: purchase date. Standard
+  new/used goods in delivered condition, including business purchases, are covered.
+  Confirm operational handling and refund turnaround for this voluntary service.
+  Statutory withdrawal and defect rights remain independent and unrestricted.
+- Return transport is at Baltes' expense for eligible returns. Confirm pickup
+  workflow and actual receiving depot. Do not require approval for statutory
+  withdrawal, or retain refunds after offering pickup contrary to BGB 357(4).
+- Confirm retained payment terms: 7 working days for advance transfer; approved
+  business invoice purchase 14 days after delivery; agreed custom work 50% deposit.
+  These were already in Baltes, not supplied by the owner in this policy request.
+- Confirm delivery areas, lead times and included unloading services. The current
+  checkout uses editable estimates (DE/CZ/NL), not an approved freight tariff.
+  Do not treat acceptance of terms as consent to unknown later surcharges.
+- Review the complete consumer ordering process before launch: final total,
+  precontract information, withdrawal information, durable-medium contract copy,
+  and any current online withdrawal-function requirements. Text changes alone
+  do not implement these requirements or constitute a compliance certification.
+- Have a qualified DE/EU legal reviewer check the terms and all translations,
+  including cross-border consumer protection and tax treatment. No automatic
+  0%-VAT claim is made merely because a business enters a VAT ID.
+
+PRIVACY / TECHNICAL RELEASE REQUIREMENTS
+- Confirm production frontend host, Base44 contracting entity/subprocessors,
+  data locations, applicable transfer safeguards, processor agreements and exact
+  retention periods. No assertion of Germany-only storage or 7-day log deletion.
+- Check whether a data protection officer is appointed and add their contact.
+- Verify any manual/external credit check and give the relevant information before
+  collecting data for it. Do not imply a credit bureau integration exists.
+- Inventory real production browser storage, authentication, CDN requests and any
+  platform-injected trackers. The storefront has local cart/language/app storage;
+  absence of first-party GA/Meta code does not prove absence of platform tracking.
+- Add any necessary consent gating before enabling non-essential technologies.
+  No pretend cookie-settings button or fabricated cookie consent manager was added.
+- Browser QA found Base44 SDK analytics/track/batch requests (local proxy 504).
+  Installed SDK 0.8.44 enables initialization, heartbeat and session-duration events
+  by default and persists base44_analytics_session_id without an expiry. Events can
+  include page path, referrer, timestamps, session ID and authenticated user ID.
+  This is now disclosed in privacy/cookie drafts. Resolve consent/disablement and
+  lawful production processing before release; policy copy is not consent gating.
+- The existing Contact form only changes local UI state; it does not transmit a
+  message. Policy contact uses mailto/tel, not this form. Fix the form separately
+  before presenting it as an operational complaints/withdrawal channel.
+- Checkout currently creates a StoreOrder through Base44. No card charge or
+  automated invoice email was added. Operations must actually send confirmations
+  and contract documents, or implement and test that workflow separately.
+
+REFERENCE REVIEW
+Read the account chats named Olborg and DIE GmbH and their local policy code.
+Useful patterns: separate policy topics, explain purchase vs quote, clear freight
+handling, direct contact banner, consistent legal navigation, readable sections.
+Do not copy their corporate identity, geography, shipping rates, warranty promises,
+jurisdiction, trackers or outdated TMG/ODR wording into Baltes.
+
+Public references:
+https://olborglogistics.com/regulamin
+https://olborglogistics.com/zwroty
+https://diecontainers.com/agb
+
+Current primary sources consulted (not an exhaustive legal opinion):
+https://www.gesetze-im-internet.de/bgb/__312g.html
+https://www.gesetze-im-internet.de/bgb/__356.html
+https://www.gesetze-im-internet.de/bgb/__357.html
+https://www.gesetze-im-internet.de/bgb/__357a.html
+https://www.gesetze-im-internet.juris.de/bgb/__439.html
+https://www.gesetze-im-internet.de/bgbeg/art_246a__1.html
+https://www.gesetze-im-internet.de/ddg/__5.html
+https://www.gesetze-im-internet.de/ttdsg/__25.html
+https://www.datenschutz.sachsen.de/informationspflichten.html
+https://www.datenschutz.rlp.de/themen/informationspflichten-und-auskunftsrechte
+https://consumer-redress.ec.europa.eu/site-relocation_en
+
+IMPLEMENTATION NOTES
+- All eight policy topics use one renderer and parallel DE/CS/NL source modules.
+- No publication or update dates are displayed; customer form dates and the
+  copyright year remain because they are not policy publication labels.
+- Existing routes remain intact. Added /cookies and /versand-lieferung; the latter
+  supplements the visual /lieferung-aufstellung service page, not replacing it.
+- Bank-transfer wording was aligned in the homepage FAQ to remove unsupported
+  claims that the current checkout accepts card/PayPal payments.

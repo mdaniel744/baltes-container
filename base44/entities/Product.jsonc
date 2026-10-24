@@ -162,6 +162,30 @@
     "featured": {
       "type": "boolean",
       "default": false
+    },
+    "translations": {
+      "type": "object",
+      "description": "Czech and Dutch product content; German uses the main fields.",
+      "properties": {
+        "cs": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "short_description": { "type": "string" },
+            "description": { "type": "string" },
+            "floor_type": { "type": "string" }
+          }
+        },
+        "nl": {
+          "type": "object",
+          "properties": {
+            "title": { "type": "string" },
+            "short_description": { "type": "string" },
+            "description": { "type": "string" },
+            "floor_type": { "type": "string" }
+          }
+        }
+      }
     }
   },
   "required": [

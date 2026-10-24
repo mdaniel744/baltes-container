@@ -1,0 +1,13 @@
+{
+  "suppliedBy": "Baltes website owner",
+  "sourceFolder": "Project Contain Products",
+  "sourceFile": "20ft Container/20ft standard containers/RAL 7016/20ft Dry Van container one tripper, 263 755-7, RAL 7016/20ft Dry Van container one tripper, 263 755-7 (1).jpg",
+  "photographer": null,
+  "license": null,
+  "processing": "Background extracted from the supplied real photograph with the built-in image editor, then resized and converted to WebP.",
+  "prompt": "docs/hero-background-extraction.txt",
+  "files": [
+    "/images/hero/project-container-800.webp",
+    "/images/hero/project-container-1600.webp"
+  ]
+}

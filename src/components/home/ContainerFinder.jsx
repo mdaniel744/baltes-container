@@ -1,43 +1,49 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@/lib/router";
 import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
-
-const USES = ["Lagerung", "Transport", "Büro", "Werkstatt", "Kühlung", "Unterkunft"];
-const SIZES = ["10 ft", "20 ft", "40 ft"];
-const CONDITIONS = ["Neu", "One-Trip", "Gebraucht"];
+import { useLocale } from "@/lib/i18n/LocaleContext";
+import { getHomeContent } from "@/lib/i18n/homeContent";
+import { formatContainerTitle } from "@/lib/catalogPresentation";
 
 export default function ContainerFinder() {
+  const { locale } = useLocale();
+  const copy = getHomeContent(locale).finder;
   const [use, setUse] = useState("Lagerung");
-  const [size, setSize] = useState("20 ft");
+  const [size, setSize] = useState("20");
   const [cond, setCond] = useState("Gebraucht");
+  const selectedSizeLabel = copy.sizes.find((option) => option.value === size)?.label ?? size;
+  const finderQuery = new URLSearchParams({ use, size, condition: cond }).toString();
 
   return (
-    <section className="py-24 border-b border-border">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/45 section-space">
       <div className="max-w-terminal mx-auto px-6">
         <SectionHeading
-          eyebrow="Container-Finder"
-          title="Finden Sie den passenden Container"
-          description="Beantworten Sie drei kurze Fragen. Wir empfehlen Ihnen die passende Kategorie aus unserem Lagerbestand."
+          title={copy.title}
+          description={copy.description}
           align="center"
         />
 
-        <div className="mt-12 bg-card border border-border p-8 md:p-10">
+        <div className="relative mt-8 overflow-hidden bg-card p-5 shadow-[0_12px_35px_rgba(0,0,0,0.07)] md:p-6">
           <div className="grid md:grid-cols-3 gap-8">
-            <FinderGroup label="Einsatzbereich" options={USES} value={use} onChange={setUse} />
-            <FinderGroup label="Größe" options={SIZES} value={size} onChange={setSize} />
-            <FinderGroup label="Zustand" options={CONDITIONS} value={cond} onChange={setCond} />
+            <FinderGroup label={copy.useLabel} options={copy.uses} value={use} onChange={setUse} />
+            <FinderGroup label={copy.sizeLabel} options={copy.sizes} value={size} onChange={setSize} />
+            <FinderGroup label={copy.conditionLabel} options={copy.conditions} value={cond} onChange={setCond} />
           </div>
 
-          <div className="mt-8 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="mt-6 flex flex-col items-center justify-between gap-4 bg-secondary/70 p-4 sm:flex-row">
             <div className="text-sm text-muted-foreground">
-              Empfehlung: <span className="text-foreground font-medium">{cond} {size} Container für {use}</span>
+              {copy.recommendation}{" "}
+              <span className="text-foreground font-medium">
+                {formatContainerTitle(copy.conditions.find((option) => option.value === cond)?.label)} {selectedSizeLabel} Container {copy.recommendationFor}{" "}
+                {copy.uses.find((option) => option.value === use)?.label}
+              </span>
             </div>
             <Link
-              to={`/container-kaufen?size=${size}&condition=${cond}`}
-              className="group flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-colors"
+              to={`/container-kaufen?${finderQuery}`}
+              className="bg-primary group flex min-h-12 items-center gap-2 px-7 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-black/10 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 active:translate-y-0 active:scale-[0.98]"
             >
-              Passende Container ansehen
+              {copy.cta}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
@@ -50,19 +56,20 @@ export default function ContainerFinder() {
 function FinderGroup({ label, options, value, onChange }) {
   return (
     <div>
-      <div className="font-mono-tech text-xs uppercase tracking-wider text-muted-foreground mb-3">{label}</div>
+      <div className="mb-3 font-mono-tech text-xs font-bold uppercase tracking-wider text-foreground/70">{label}</div>
       <div className="flex flex-wrap gap-2">
         {options.map((opt) => (
           <button
-            key={opt}
-            onClick={() => onChange(opt)}
-            className={`px-4 py-2.5 text-sm font-medium border transition-colors ${
-              value === opt
-                ? "border-primary bg-primary/10 text-primary"
-                : "border-border text-muted-foreground hover:border-foreground/30 hover:text-foreground"
+            key={opt.value}
+            type="button"
+            onClick={() => onChange(opt.value)}
+            className={`min-h-11 px-4 py-2.5 text-sm font-semibold transition duration-200 active:scale-[0.97] ${
+              value === opt.value
+                ? "bg-primary -translate-y-0.5 text-primary-foreground shadow-lg shadow-black/10"
+                : "bg-secondary text-muted-foreground shadow-sm hover:-translate-y-0.5 hover:bg-primary/10 hover:text-primary hover:shadow-md"
             }`}
           >
-            {opt}
+            {formatContainerTitle(opt.label)}
           </button>
         ))}
       </div>

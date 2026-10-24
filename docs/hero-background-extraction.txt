@@ -1,0 +1,5 @@
+Use case: background-extraction.
+Asset type: shipping-container website hero.
+Input image: edit target, the owner's actual photograph.
+Primary request: Remove only the entire background and ground from this photo, isolating the single anthracite 20 ft container in the foreground onto genuine alpha transparency. All stacked containers, cranes, pavement and background equipment must disappear.
+Constraints: Preserve the exact photographed foreground container, its geometry, camera angle, proportions, corrugations, door bars, corner castings, surface texture, minor marks, original gray color, original sunlight and every printed marking verbatim. Do not redraw, repaint, clean up, relight, invent or replace the container. Keep its edges crisp and natural with no halos. Keep the complete container with a small transparent margin, no cropped corners. No replacement ground, added objects, fake shadow, white background or checkerboard pixels. This is background extraction of an actual photograph, not a new photorealistic rendering.

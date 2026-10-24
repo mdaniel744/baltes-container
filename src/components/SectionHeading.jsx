@@ -1,19 +1,15 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { formatContainerTitle } from "@/lib/catalogPresentation";
 
-export default function SectionHeading({ eyebrow, title, description, align = "left", className }) {
+export default function SectionHeading({ title, description, align = "left", className }) {
   return (
     <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center", className)}>
-      {eyebrow && (
-        <div className="font-mono-tech text-xs uppercase tracking-[0.2em] text-primary mb-4">
-          {eyebrow}
-        </div>
-      )}
-      <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-balance">
-        {title}
+      <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-balance">
+        {typeof title === "string" ? formatContainerTitle(title) : title}
       </h2>
       {description && (
-        <p className="mt-4 text-muted-foreground text-lg leading-relaxed text-balance">
+        <p className="mt-3 text-muted-foreground text-base leading-relaxed text-balance">
           {description}
         </p>
       )}

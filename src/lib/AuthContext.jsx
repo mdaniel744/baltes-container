@@ -18,7 +18,7 @@ export const AuthProvider = ({ children }) => {
     checkAppState();
   }, []);
 
-  const checkAppState = async () => {
+  async function checkAppState() {
     try {
       setIsLoadingPublicSettings(true);
       setAuthError(null);
@@ -87,9 +87,9 @@ export const AuthProvider = ({ children }) => {
       setIsLoadingPublicSettings(false);
       setIsLoadingAuth(false);
     }
-  };
+  }
 
-  const checkUserAuth = async () => {
+  async function checkUserAuth() {
     try {
       // Now check if the user is authenticated
       setIsLoadingAuth(true);
@@ -112,7 +112,7 @@ export const AuthProvider = ({ children }) => {
         });
       }
     }
-  };
+  }
 
   const logout = (shouldRedirect = true) => {
     setUser(null);
