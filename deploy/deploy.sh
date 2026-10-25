@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Invoked by deploy/webhook-server.cjs on a verified push to main.
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
