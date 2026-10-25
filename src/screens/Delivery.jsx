@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { Truck, Construction, MapPin, Ruler, AlertTriangle, PackageCheck, ArrowRight } from "lucide-react";
+import { Truck, Construction, MapPin, Ruler, AlertTriangle, PackageCheck } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { IMAGES } from "@/lib/images";
@@ -106,7 +106,7 @@ export default function Delivery() {
         <div className="mt-10 text-center">
           <h2 className="font-heading text-3xl font-extrabold mb-4">{copy.ctaTitle}</h2>
           <Link to="/angebot-anfordern" className="inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors">
-            {copy.cta} <ArrowRight className="w-5 h-5" />
+            {copy.cta}
           </Link>
           <p className="mt-4 text-sm">
             <Link to="/versand-lieferung" className="underline underline-offset-4 hover:text-primary">{getLegalContent(locale).shipping.title}</Link>

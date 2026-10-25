@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { ArrowRight } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { IMAGES } from "@/lib/images";
@@ -34,7 +33,7 @@ export default function AboutPreview() {
             </div>
             <Link to="/ueber-uns" className="mt-8 group inline-flex items-center gap-2 text-sm font-bold text-primary">
               {copy.cta}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-foreground" />
+
             </Link>
           </div>
         </div>

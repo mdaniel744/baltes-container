@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "@/lib/router";
-import { CheckCircle2, MapPin, Truck, ArrowLeft, ShoppingCart, Phone, MessageSquare, ArrowRight, ChevronDown } from "lucide-react";
+import { CheckCircle2, Truck, ShoppingCart, MessageSquare, Plus, Minus } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import DOMPurify from "dompurify";
 import { fetchProductBySlug } from "@/lib/supabase/catalog";
@@ -64,7 +64,6 @@ export default function ProductDetail() {
     { label: t("specs.condition"), value: catalogLabel(product.condition) },
     { label: t("specs.conditionGrade"), value: catalogLabel(product.condition_grade) },
     { label: t("specs.color"), value: formatProductColor(locale, product.color) },
-    { label: t("specs.depot"), value: product.depot },
     { label: t("specs.exteriorLength"), value: product.ext_length_mm ? `${product.ext_length_mm} mm` : "—" },
     { label: t("specs.exteriorWidth"), value: product.ext_width_mm ? `${product.ext_width_mm} mm` : "—" },
     { label: t("specs.exteriorHeight"), value: product.ext_height_mm ? `${product.ext_height_mm} mm` : "—" },
@@ -103,7 +102,7 @@ export default function ProductDetail() {
 
       <div className="max-w-terminal mx-auto px-6 py-10">
         <Link to="/container-kaufen" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary mb-8">
-          <ArrowLeft className="w-4 h-4 text-foreground" /> {t("common.backToShop")}
+           {t("common.backToShop")}
         </Link>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
@@ -141,9 +140,6 @@ export default function ProductDetail() {
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="flex items-center gap-1.5 bg-secondary px-3 py-1.5 text-sm text-foreground">
                 {catalogLabel(product.condition)} · {catalogLabel(product.condition_grade)}
-              </span>
-              <span className="flex items-center gap-1.5 bg-secondary px-3 py-1.5 text-sm text-foreground">
-                <MapPin className="w-4 h-4" /> {product.depot}
               </span>
               {product.availability === "Auf Lager" ? (
                 <span className="flex items-center gap-1.5 bg-success px-3 py-1.5 text-sm text-success-foreground shadow-sm">
@@ -202,12 +198,9 @@ export default function ProductDetail() {
                 to={`/angebot-anfordern?${new URLSearchParams({ product: product.slug })}`}
                 className="mt-5 flex w-full items-center justify-center gap-2 bg-white px-6 py-3.5 font-bold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:text-primary hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
               >
-                {t("common.requestQuote")} <ArrowRight className="h-4 w-4 text-foreground" aria-hidden="true" />
+                {t("common.requestQuote")}
               </Link>
               <p className="mt-3 text-xs leading-relaxed text-muted-foreground">{purchaseCopy.quoteNote}</p>
-              <a href="tel:+491635393159" className="w-full flex items-center justify-center gap-2 px-6 py-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-4 h-4 text-foreground" /> {t("product.requestAdvice")}
-              </a>
             </section>
           </div>
         </div>
@@ -218,7 +211,8 @@ export default function ProductDetail() {
           <details className="group mt-3 bg-neutral-50">
             <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 font-heading text-base font-bold [&::-webkit-details-marker]:hidden">
               {t("product.description")}
-              <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" />
+              <Plus className="h-5 w-5 shrink-0 text-muted-foreground group-open:hidden" aria-hidden="true" />
+              <Minus className="hidden h-5 w-5 shrink-0 text-muted-foreground group-open:block" aria-hidden="true" />
             </summary>
             <div
               className="max-w-4xl px-5 pb-5 text-sm leading-relaxed text-muted-foreground [&_p]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"

@@ -1,3 +1,5 @@
+import { LEGAL_COMPANY } from "../legalCompany.js";
+
 const sharedValues = {
   sizes: [
     { value: "10", label: "10 ft" },
@@ -23,7 +25,7 @@ export const HOME_CONTENT = {
       stats: [
         { value: "40+", label: "Jahre Erfahrung" },
         { value: "3", label: "Sprachen" },
-        { value: "DE / NL / PL", label: "Depots" },
+        { value: "Wadgassen", label: "Standort" },
         { value: "10–40 ft", label: "Größen" },
       ],
     },
@@ -183,13 +185,11 @@ export const HOME_CONTENT = {
     },
     locations: {
       eyebrow: "Standorte",
-      title: "Unsere Depots und Standorte",
-      description: "Jeder Standort hat eine klare Funktion. Besichtigungen und Abholungen nach Terminvereinbarung [VERIFY].",
+      title: "Unser Standort in Wadgassen",
+      description: "Hauptsitz und Depot in Wadgassen. Besichtigungen und Abholungen nach Terminvereinbarung [VERIFY].",
       more: "Mehr Details",
       items: [
-        { role: "Hauptsitz & Depot", address: "Im Wiesengrund 43, 66787 Wadgassen, Deutschland" },
-        { role: "Depot & Abholstelle", address: "Peenestraße 37, 17449 Karlshagen, Deutschland" },
-        { role: "Depot", address: "Dowcip 4, 00-051 Warszawa, Polen" },
+        { role: "Hauptsitz & Depot", address: `${LEGAL_COMPANY.address}, Deutschland` },
       ],
     },
     faq: {
@@ -232,7 +232,7 @@ export const HOME_CONTENT = {
       stats: [
         { value: "40+", label: "Let zkušeností" },
         { value: "3", label: "Jazyky" },
-        { value: "DE / NL / PL", label: "Depa" },
+        { value: "Wadgassen", label: "Sídlo" },
         { value: "10–40 ft", label: "Velikosti" },
       ],
     },
@@ -387,13 +387,11 @@ export const HOME_CONTENT = {
     },
     locations: {
       eyebrow: "Pobočky",
-      title: "Naše depa a pobočky",
-      description: "Každá pobočka má jasnou funkci. Prohlídky a vyzvednutí po předchozí domluvě [VERIFY].",
+      title: "Naše sídlo ve Wadgassenu",
+      description: "Sídlo a depo ve Wadgassenu. Prohlídky a vyzvednutí po předchozí domluvě [VERIFY].",
       more: "Více informací",
       items: [
-        { role: "Sídlo a depo", address: "Im Wiesengrund 43, 66787 Wadgassen, Německo" },
-        { role: "Depo a výdejní místo", address: "Peenestraße 37, 17449 Karlshagen, Německo" },
-        { role: "Depo", address: "Dowcip 4, 00-051 Warszawa, Polsko" },
+        { role: "Sídlo a depo", address: `${LEGAL_COMPANY.address}, Německo` },
       ],
     },
     faq: {
@@ -436,7 +434,7 @@ export const HOME_CONTENT = {
       stats: [
         { value: "40+", label: "Jaar ervaring" },
         { value: "3", label: "Talen" },
-        { value: "DE / NL / PL", label: "Depots" },
+        { value: "Wadgassen", label: "Locatie" },
         { value: "10–40 ft", label: "Maten" },
       ],
     },
@@ -591,13 +589,11 @@ export const HOME_CONTENT = {
     },
     locations: {
       eyebrow: "Locaties",
-      title: "Onze depots en locaties",
-      description: "Elke locatie heeft een duidelijke functie. Bezichtiging en afhalen op afspraak [VERIFY].",
+      title: "Onze locatie in Wadgassen",
+      description: "Hoofdkantoor en depot in Wadgassen. Bezichtiging en afhalen op afspraak [VERIFY].",
       more: "Meer informatie",
       items: [
-        { role: "Hoofdkantoor en depot", address: "Im Wiesengrund 43, 66787 Wadgassen, Duitsland" },
-        { role: "Depot en afhaallocatie", address: "Peenestraße 37, 17449 Karlshagen, Duitsland" },
-        { role: "Depot", address: "Dowcip 4, 00-051 Warszawa, Polen" },
+        { role: "Hoofdkantoor en depot", address: `${LEGAL_COMPANY.address}, Duitsland` },
       ],
     },
     faq: {

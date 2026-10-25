@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { Award, Users, Truck, MapPin, ArrowRight } from "lucide-react";
+import { Award, Users, Truck, MapPin } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { IMAGES } from "@/lib/images";
@@ -67,7 +67,7 @@ export default function About() {
           <h2 className="font-heading text-3xl font-extrabold mb-4">{copy.ctaTitle}</h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link to="/kontakt" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold hover:bg-primary/90 transition-colors">
-              {copy.contact} <ArrowRight className="w-4 h-4" />
+              {copy.contact}
             </Link>
             <Link to="/standorte" className="inline-flex items-center gap-2 bg-secondary px-6 py-3 font-bold shadow-sm transition hover:-translate-y-0.5 hover:text-primary">
               {copy.locations}

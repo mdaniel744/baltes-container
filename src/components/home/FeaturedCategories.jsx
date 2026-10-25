@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { ArrowRight } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { CATEGORIES } from "@/lib/images";
@@ -22,7 +21,7 @@ export default function FeaturedCategories() {
           />
           <Link to="/container-kaufen" className="group flex items-center gap-2 text-sm font-bold text-primary shrink-0">
             {copy.cta}
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-foreground" />
+
           </Link>
         </div>
 
@@ -53,7 +52,7 @@ export default function FeaturedCategories() {
                 <h3 className="font-heading text-base font-bold leading-snug group-hover:text-foreground transition-colors">
                   {formatContainerTitle(localized.name)}
                 </h3>
-                <ArrowRight aria-hidden="true" className="w-4 h-4 shrink-0 mt-0.5 text-foreground transition-transform group-hover:translate-x-1" />
+
                 </div>
                 <p className="mt-1 text-sm text-muted-foreground leading-snug">{localized.benefit}</p>
               </div>

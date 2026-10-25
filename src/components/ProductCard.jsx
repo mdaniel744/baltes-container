@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@/lib/router";
 import { Image } from "@/components/ui/image";
-import { CheckCircle2, MapPin, ShoppingCart } from "lucide-react";
+import { CheckCircle2, ShoppingCart } from "lucide-react";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { formatCurrency, getLocalizedProduct } from "@/lib/i18n/messages";
 import { useCart } from "@/lib/CartContext";
@@ -78,8 +78,6 @@ export default function ProductCard({ product, minimal = false }) {
           <span>{product.size_ft === "Sonstige" ? catalogLabel(product.size_ft) : `${product.size_ft} ${t("product.foot")}`}</span>
           <span className="text-foreground/35">•</span>
           <span>{catalogLabel(product.product_type)}</span>
-          <span className="text-foreground/35">•</span>
-          <span className="flex items-center gap-1"><MapPin className="w-3 h-3" />{product.depot}</span>
         </div>
 
         <div className="mt-auto pt-4">

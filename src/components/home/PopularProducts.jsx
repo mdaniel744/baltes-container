@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@/lib/router";
-import { ArrowRight } from "lucide-react";
 import { fetchFeaturedProducts } from "@/lib/supabase/catalog";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
@@ -30,7 +29,7 @@ export default function PopularProducts() {
           />
           <Link to="/container-kaufen" className="group flex items-center gap-2 text-sm font-bold text-primary shrink-0">
             {copy.cta}
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-foreground" />
+
           </Link>
         </div>
 

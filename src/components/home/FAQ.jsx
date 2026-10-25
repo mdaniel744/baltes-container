@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getHomeContent } from "@/lib/i18n/homeContent";
@@ -27,7 +27,9 @@ export default function FAQ() {
                 aria-expanded={open === i}
               >
                 <span className="font-heading font-bold text-lg">{item.q}</span>
-                <ChevronDown className={`w-5 h-5 text-foreground shrink-0 transition-transform ${open === i ? "rotate-180" : ""}`} />
+                {open === i
+                  ? <Minus className="w-5 h-5 text-foreground shrink-0" aria-hidden="true" />
+                  : <Plus className="w-5 h-5 text-foreground shrink-0" aria-hidden="true" />}
               </button>
               {open === i && (
                 <p className="pb-5 text-muted-foreground leading-relaxed">{item.a}</p>

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "@/lib/router";
-import { ArrowRight } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getHomeContent } from "@/lib/i18n/homeContent";
@@ -44,7 +43,7 @@ export default function ContainerFinder() {
               className="bg-primary group flex min-h-12 items-center gap-2 px-7 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-black/10 transition duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 active:translate-y-0 active:scale-[0.98]"
             >
               {copy.cta}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+
             </Link>
           </div>
         </div>

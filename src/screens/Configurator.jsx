@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useSearchParams } from "@/lib/router";
 import { useQuery } from "@tanstack/react-query";
-import { Check, ArrowRight, ArrowLeft, Send } from "lucide-react";
+import { Check, Send } from "lucide-react";
 import { fetchProductBySlug } from "@/lib/supabase/catalog";
 import { submitInquiry } from "@/lib/supabase/inquiries";
 import { useLocale } from "@/lib/i18n/LocaleContext";
@@ -238,12 +238,12 @@ function ConfiguratorForm({ product }) {
         <div className="mt-10 flex items-center justify-between">
           {step > steps[0] ? (
             <button type="button" onClick={prev} className="flex items-center gap-2 px-5 py-3 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              <ArrowLeft className="w-4 h-4" /> {copy.back}
+               {copy.back}
             </button>
           ) : <span />}
           {step < 5 ? (
             <button key="quote-next" type="button" onClick={(event) => { event.preventDefault(); next(); }} className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-colors">
-              {copy.next} <ArrowRight className="w-4 h-4" />
+              {copy.next}
             </button>
           ) : (
             <button key="quote-submit" type="submit" disabled={submitting} className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-bold text-sm hover:bg-primary/90 transition-colors disabled:opacity-50">

@@ -1,18 +1,7 @@
 "use client";
 
 import React, { useEffect, useMemo, useState } from "react";
-import {
-  ArrowLeft,
-  ArrowRight,
-  Banknote,
-  Building2,
-  Check,
-  CheckCircle2,
-  LockKeyhole,
-  PackageCheck,
-  ShoppingBag,
-  Truck,
-} from "lucide-react";
+import { Banknote, Building2, Check, CheckCircle2, LockKeyhole, PackageCheck, ShoppingBag, Truck } from "lucide-react";
 import { base44 } from "@/api/base44Client";
 import { Image } from "@/components/ui/image";
 import { useCart } from "@/lib/CartContext";
@@ -466,7 +455,7 @@ export default function Checkout() {
                 {error ? <p role="alert" className="bg-destructive/10 p-4 text-sm font-semibold text-destructive">{error}</p> : null}
                 <div className="flex justify-end">
                   <button type="submit" className="inline-flex items-center gap-2 bg-primary px-7 py-3.5 font-bold text-primary-foreground shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-primary/90">
-                    {t("checkout.toPayment")} <ArrowRight className="h-4 w-4" />
+                    {t("checkout.toPayment")}
                   </button>
                 </div>
               </form>
@@ -511,10 +500,10 @@ export default function Checkout() {
                 {error ? <p role="alert" className="bg-destructive/10 p-4 text-sm font-semibold text-destructive">{error}</p> : null}
                 <div className="flex flex-wrap justify-between gap-3">
                   <button type="button" onClick={() => setStep(1)} className="inline-flex items-center gap-2 bg-secondary px-6 py-3 font-bold text-foreground transition hover:bg-accent">
-                    <ArrowLeft className="h-4 w-4" /> {t("checkout.back")}
+                     {t("checkout.back")}
                   </button>
                   <button type="submit" className="inline-flex items-center gap-2 bg-primary px-7 py-3 font-bold text-primary-foreground shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-primary/90">
-                    {t("checkout.toReview")} <ArrowRight className="h-4 w-4" />
+                    {t("checkout.toReview")}
                   </button>
                 </div>
               </form>
@@ -571,7 +560,7 @@ export default function Checkout() {
                 {error ? <p role="alert" className="bg-destructive/10 p-4 text-sm font-semibold text-destructive">{error}</p> : null}
                 <div className="flex flex-wrap justify-between gap-3">
                   <button type="button" onClick={() => setStep(2)} className="inline-flex items-center gap-2 bg-secondary px-6 py-3 font-bold text-foreground transition hover:bg-accent">
-                    <ArrowLeft className="h-4 w-4" /> {t("checkout.back")}
+                     {t("checkout.back")}
                   </button>
                   <button type="button" onClick={submitOrder} disabled={submitting} className="inline-flex items-center gap-2 bg-primary px-7 py-3.5 font-bold text-primary-foreground shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-primary/90 disabled:cursor-wait disabled:opacity-60">
                     {submitting ? t("checkout.submitting") : t("checkout.placeOrder")} <CheckCircle2 className="h-5 w-5" />

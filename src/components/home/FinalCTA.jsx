@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { ArrowRight, Phone } from "lucide-react";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getHomeContent } from "@/lib/i18n/homeContent";
 
@@ -21,14 +20,11 @@ export default function FinalCTA() {
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Link to="/container-kaufen" className="group flex items-center justify-center gap-2 bg-secondary px-7 py-4 font-bold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:text-primary">
             {copy.shop}
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1 text-foreground" />
+
           </Link>
           <Link to="/angebot-anfordern" className="flex items-center justify-center gap-2 bg-primary px-7 py-4 font-bold text-primary-foreground shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-primary/90">
             {copy.quote}
           </Link>
-          <a href="tel:+491635393159" className="flex items-center justify-center gap-2 px-7 py-4 text-foreground font-bold hover:text-primary transition-colors">
-            <Phone className="w-5 h-5 text-foreground" /> {copy.call}
-          </a>
         </div>
       </div>
     </section>

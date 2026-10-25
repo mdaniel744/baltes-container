@@ -1,5 +1,5 @@
 import React, { useId, useState } from "react";
-import { Box, Weight, Scale, ShieldCheck, ChevronDown, DoorOpen, Check, Minus } from "lucide-react";
+import { Box, Weight, Scale, ShieldCheck, Plus, DoorOpen, Check, Minus } from "lucide-react";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getTechnicalContent } from "@/lib/i18n/technicalContent";
 import { formatMeasurement, getProductDimensions } from "@/lib/productDimensions";
@@ -92,7 +92,8 @@ export default function ProductTechnicalOverview({ product, specs }) {
       <details className="group mt-5 bg-neutral-50">
         <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 font-heading text-base font-bold text-foreground [&::-webkit-details-marker]:hidden">
           {copy.allSpecs}
-          <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" />
+          <Plus className="h-5 w-5 shrink-0 text-muted-foreground group-open:hidden" aria-hidden="true" />
+          <Minus className="hidden h-5 w-5 shrink-0 text-muted-foreground group-open:block" aria-hidden="true" />
         </summary>
         <div className="px-3 pb-3 sm:px-5 sm:pb-5">
           <table className="w-full table-fixed text-left text-sm">

@@ -1,3 +1,5 @@
+import { LEGAL_COMPANY } from "../legalCompany.js";
+
 export const PAGE_CONTENT = {
   de: {
     about: {
@@ -86,11 +88,9 @@ export const PAGE_CONTENT = {
       email: "E-Mail",
       hours: "Öffnungszeiten",
       hoursValue: "Montag–Freitag, 09:00–19:00 Uhr [VERIFY]",
-      locationsTitle: "Standorte",
+      locationsTitle: "Standort",
       locations: [
-        { name: "Wadgassen (Hauptsitz)", address: "Im Wiesengrund 43, 66787 Wadgassen", role: "Hauptsitz & Depot" },
-        { name: "Karlshagen", address: "Peenestraße 37, 17449 Karlshagen", role: "Depot & Abholstelle" },
-        { name: "Warschau", address: "Dowcip 4, 00-051 Warszawa, Polen", role: "Depot" },
+        { name: "Wadgassen (Hauptsitz)", address: LEGAL_COMPANY.address, role: "Hauptsitz & Depot" },
       ],
       sentTitle: "Nachricht gesendet",
       sentCopy: "Vielen Dank. Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
@@ -198,11 +198,9 @@ export const PAGE_CONTENT = {
       email: "E-mail",
       hours: "Otevírací doba",
       hoursValue: "Pondělí–pátek, 09:00–19:00 [VERIFY]",
-      locationsTitle: "Pobočky",
+      locationsTitle: "Sídlo",
       locations: [
-        { name: "Wadgassen (sídlo)", address: "Im Wiesengrund 43, 66787 Wadgassen", role: "Sídlo a depo" },
-        { name: "Karlshagen", address: "Peenestraße 37, 17449 Karlshagen", role: "Depo a výdejní místo" },
-        { name: "Varšava", address: "Dowcip 4, 00-051 Warszawa, Polsko", role: "Depo" },
+        { name: "Wadgassen (sídlo)", address: LEGAL_COMPANY.address, role: "Sídlo a depo" },
       ],
       sentTitle: "Zpráva odeslána",
       sentCopy: "Děkujeme. Ozveme se vám do 24 hodin.",
@@ -310,11 +308,9 @@ export const PAGE_CONTENT = {
       email: "E-mail",
       hours: "Openingstijden",
       hoursValue: "Maandag–vrijdag, 09:00–19:00 [VERIFY]",
-      locationsTitle: "Locaties",
+      locationsTitle: "Locatie",
       locations: [
-        { name: "Wadgassen (hoofdkantoor)", address: "Im Wiesengrund 43, 66787 Wadgassen", role: "Hoofdkantoor en depot" },
-        { name: "Karlshagen", address: "Peenestraße 37, 17449 Karlshagen", role: "Depot en afhaallocatie" },
-        { name: "Warschau", address: "Dowcip 4, 00-051 Warszawa, Polen", role: "Depot" },
+        { name: "Wadgassen (hoofdkantoor)", address: LEGAL_COMPANY.address, role: "Hoofdkantoor en depot" },
       ],
       sentTitle: "Bericht verzonden",
       sentCopy: "Bedankt. Wij nemen binnen 24 uur contact met u op.",

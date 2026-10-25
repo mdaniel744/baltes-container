@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Send, Check } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getPageContent } from "@/lib/i18n/pageContent";
+import { LEGAL_COMPANY } from "@/lib/legalCompany";
 
 export default function Contact() {
   const { locale } = useLocale();
@@ -32,8 +33,7 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-foreground shrink-0 mt-1" />
                 <div>
                   <h3 className="font-heading font-bold mb-1">{copy.phone}</h3>
-                  <a href="tel:+491635393159" className="text-muted-foreground hover:text-primary transition-colors">+49 163 5393159</a><br />
-                  <a href="tel:+48500667974" className="text-muted-foreground hover:text-primary transition-colors">+48 500 667 974</a>
+                  <a href={LEGAL_COMPANY.phoneHref} className="text-muted-foreground hover:text-primary transition-colors">{LEGAL_COMPANY.phone}</a>
                 </div>
               </div>
               <div className="flex items-start gap-4">

@@ -25,7 +25,8 @@ export const metadata = {
   description:
     "Baltes Container – seit 1983 Ihr Experte für neue und gebrauchte Container. Seecontainer, Lagercontainer, Kühlcontainer und individuelle Umbauten. Transparent beraten, deutschlandweit geliefert.",
   icons: {
-    icon: "https://base44.com/logo_v2.svg",
+    icon: { url: "/baltes-logo.png", type: "image/png" },
+    apple: "/baltes-logo.png",
   },
 };
 

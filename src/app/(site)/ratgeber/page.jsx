@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Boxes, CircleHelp, Truck } from "lucide-react";
+import { Boxes, CircleHelp, Truck } from "lucide-react";
 import FAQ from "@/components/home/FAQ";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { Link } from "@/lib/router";
@@ -63,7 +63,7 @@ export default function GuidePage() {
               <h2 className="mt-5 font-heading text-xl font-extrabold">{card.title}</h2>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{card.copy}</p>
               <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-primary">
-                {card.action} <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1 text-foreground" />
+                {card.action}
               </span>
             </Link>
           );

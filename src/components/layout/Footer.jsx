@@ -56,8 +56,8 @@ export default function Footer() {
               {t("footer.companyCopy")}
             </p>
             <div className="space-y-2 text-sm text-muted-foreground">
-              <a href="tel:+491635393159" className="flex items-center gap-2 hover:text-primary transition-colors">
-                <Phone className="w-4 h-4 text-foreground shrink-0" /> +49 163 5393159
+              <a href={LEGAL_COMPANY.phoneHref} className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="w-4 h-4 text-foreground shrink-0" /> {LEGAL_COMPANY.phone}
               </a>
               <a href="mailto:contact@baltescontainer.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4 text-foreground shrink-0" /> contact@baltescontainer.com

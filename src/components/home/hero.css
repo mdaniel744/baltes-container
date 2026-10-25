@@ -10,15 +10,13 @@
 .hero-primary:hover { background: #61428e; transform: translateY(-2px); box-shadow: 0 10px 24px #30204025; }
 .hero-secondary { background: #f4f4f5; color: #28282d; }
 .hero-secondary:hover { background: #ebebee; transform: translateY(-2px); }
-.hero-consultation { margin-top: 18px; display: inline-flex; align-items: center; gap: 9px; color: #62626b; font-size: .8125rem; }
-.hero-consultation:hover { color: #202025; }
 .hero-history { display: flex; align-items: center; gap: 13px; margin-top: 35px; }
 .hero-history strong { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; letter-spacing: -.06em; color: #242429; }
 .hero-history span { max-width: 175px; font-size: .75rem; line-height: 1.5; color: #73737c; }
 .hero-showcase { min-width: 0; }
 .hero-container-photo { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: contain; object-position: center; background: transparent; border-radius: 0; }
 .hero-size-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
-.hero-size-links a { display: flex; align-items: center; justify-content: space-between; min-height: 44px; padding: 12px 16px; background: #f4f4f5; color: #393940; font-size: .8125rem; font-weight: 600; transition: background .2s, transform .2s; }
+.hero-size-links a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 16px; background: #f4f4f5; color: #393940; font-size: .8125rem; font-weight: 600; transition: background .2s, transform .2s; }
 .hero-size-links a:hover { background: #eaeaec; transform: translateY(-2px); }
 .hero-size-links a:focus-visible { outline: 2px solid #7050a0; outline-offset: 3px; }
 @media (max-width: 1023px) {
@@ -33,7 +31,6 @@
   .hero-description { margin-top: 16px; max-width: 500px; font-size: .9rem; line-height: 1.65; }
   .hero-actions { margin-top: 20px; gap: 8px; }
   .hero-primary, .hero-secondary { flex: 1 1 auto; padding: 12px 14px; min-height: 48px; }
-  .hero-consultation { margin-top: 14px; }
   .hero-history { display: none; }
   .hero-showcase { margin-top: 0; }
   .hero-container-photo { aspect-ratio: 4 / 3; }

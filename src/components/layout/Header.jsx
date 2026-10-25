@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "@/lib/router";
-import { Menu, X, Search, ShoppingCart, Phone, ChevronDown, Globe } from "lucide-react";
+import { Menu, X, Search, ShoppingCart, Phone, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { IMAGES } from "@/lib/images";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { SUPPORTED_LOCALES } from "@/lib/i18n/messages";
 import { useCart } from "@/lib/CartContext";
+import { LEGAL_COMPANY } from "@/lib/legalCompany";
 
 const NAV = [
   { labelKey: "nav.home", to: "/" },
@@ -33,7 +34,7 @@ export default function Header() {
       <div className="hidden md:block bg-card/60">
         <div className="max-w-terminal mx-auto px-6 flex items-center justify-between text-xs text-muted-foreground h-8">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5"><Phone className="w-3 h-3 text-foreground" />+49 163 5393159</span>
+            <a href={LEGAL_COMPANY.phoneHref} className="flex items-center gap-1.5 hover:text-foreground transition-colors"><Phone className="w-3 h-3 text-foreground" />{LEGAL_COMPANY.phone}</a>
             <span>{t("common.hours")}</span>
             <span>{t("common.nationwideDelivery")}</span>
           </div>
@@ -84,7 +85,7 @@ export default function Header() {
             >
               <Globe className="w-5 h-5" />
               <span>{activeLanguage?.short}</span>
-              <ChevronDown className="w-3 h-3" />
+
             </button>
             {langOpen && (
               <div
@@ -191,9 +192,6 @@ export default function Header() {
               </div>
             </div>
             <div className="flex gap-2 mt-4">
-              <a href="tel:+491635393159" className="flex flex-1 items-center justify-center gap-2 bg-secondary py-3 text-sm">
-                <Phone className="w-4 h-4 text-foreground" /> {t("common.call")}
-              </a>
               <Link to="/kontakt" onClick={() => setMobileOpen(false)} className="flex flex-1 items-center justify-center gap-2 bg-secondary py-3 text-sm">
                 {t("common.contact")}
               </Link>

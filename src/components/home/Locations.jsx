@@ -1,25 +1,16 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { MapPin, Phone, ArrowRight } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getHomeContent } from "@/lib/i18n/homeContent";
+import { LEGAL_COMPANY } from "@/lib/legalCompany";
 
 const LOCATIONS = [
   {
     name: "Wadgassen",
-    phone: "+49 163 5393159",
+    phone: LEGAL_COMPANY.phone,
     slug: "wadgassen",
-  },
-  {
-    name: "Karlshagen",
-    phone: "+49 163 5393159",
-    slug: "karlshagen",
-  },
-  {
-    name: "Warschau",
-    phone: "+48 500 667 974",
-    slug: "warschau",
   },
 ];
 
@@ -36,7 +27,7 @@ export default function Locations() {
           align="center"
         />
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-xl gap-6">
           {LOCATIONS.map((loc, index) => {
             const localized = copy.items[index];
             return (
@@ -51,7 +42,7 @@ export default function Locations() {
                 <Phone className="w-4 h-4 text-foreground" /> {loc.phone}
               </p>
               <span className="mt-5 inline-flex items-center gap-1 text-sm font-bold text-primary">
-                {copy.more} <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-foreground" />
+                {copy.more}
               </span>
             </Link>
             );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { DoorOpen, Lightbulb, Thermometer, PaintBucket, Wind, Wrench, ArrowRight } from "lucide-react";
+import { DoorOpen, Lightbulb, Thermometer, PaintBucket, Wind, Wrench } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { IMAGES } from "@/lib/images";
@@ -43,7 +43,7 @@ export default function CustomConversions() {
 
             <Link to="/angebot-anfordern" className="group mt-8 inline-flex items-center gap-2 bg-primary px-6 py-3 text-sm font-bold text-primary-foreground shadow-lg shadow-black/10 transition hover:-translate-y-0.5 hover:bg-primary/90">
               {copy.cta}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+
             </Link>
           </div>
         </div>

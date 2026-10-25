@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@/lib/router";
-import { Truck, Construction, MapPin, ArrowRight } from "lucide-react";
+import { Truck, Construction, MapPin } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import SectionHeading from "@/components/SectionHeading";
 import { IMAGES } from "@/lib/images";
@@ -42,7 +42,7 @@ export default function DeliverySection() {
 
             <Link to="/lieferung-aufstellung" className="group mt-8 inline-flex items-center gap-2 bg-primary/10 px-6 py-3 text-sm font-bold text-primary shadow-sm transition hover:-translate-y-0.5 hover:bg-primary hover:text-primary-foreground">
               {copy.cta}
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1 text-foreground group-hover:text-white" />
+
             </Link>
           </div>
 

@@ -19,7 +19,7 @@ export default function HeroContainer({ copy }) {
       <nav className="hero-size-links" aria-label={copy.sizeLabel}>
         {HERO_CONTAINER_SIZES.map((size) => (
           <Link key={size} to={heroShopLink(size)} aria-label={copy.viewSize.replace("{size}", size)}>
-            {size} ft <span aria-hidden="true">↗</span>
+            {size} ft
           </Link>
         ))}
       </nav>
