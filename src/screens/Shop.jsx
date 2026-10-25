@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import { useSearchParams } from "@/lib/router";
 import { SlidersHorizontal, X } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { fetchProducts } from "@/lib/supabase/catalog";
 import ProductCard from "@/components/ProductCard";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getHomeContent } from "@/lib/i18n/homeContent";
@@ -49,7 +49,7 @@ export default function Shop() {
   const selectedUseTypes = getFinderUseTypes(selectedUse);
 
   useEffect(() => {
-    base44.entities.Product.list("-created_date", 50)
+    fetchProducts({ limit: 50 })
       .then(setProducts)
       .catch(() => setProducts([]))
       .finally(() => setLoading(false));

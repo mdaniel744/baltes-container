@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Link, useSearchParams } from "@/lib/router";
 import { useQuery } from "@tanstack/react-query";
 import { Check, ArrowRight, ArrowLeft, Send } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { fetchProductBySlug } from "@/lib/supabase/catalog";
+import { submitInquiry } from "@/lib/supabase/inquiries";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import { getConfiguratorContent } from "@/lib/i18n/configuratorContent";
 import { getLocalizedProduct } from "@/lib/i18n/messages";
@@ -16,10 +17,7 @@ export default function Configurator() {
   const purchaseCopy = getPurchaseContent(locale);
   const { data: product, isPending, isError } = useQuery({
     queryKey: ["quote-product", productSlug],
-    queryFn: async () => {
-      const products = await base44.entities.Product.filter({ slug: productSlug });
-      return products[0] ?? null;
-    },
+    queryFn: () => fetchProductBySlug(productSlug),
     enabled: Boolean(productSlug),
     retry: false,
   });
@@ -73,7 +71,8 @@ function ConfiguratorForm({ product }) {
     setSubmitting(true);
     setSubmitError(false);
     try {
-      await base44.entities.QuoteRequest.create(buildProductQuotePayload(data, product, intent));
+      const { name, email, phone, message, ...details } = buildProductQuotePayload(data, product, intent);
+      await submitInquiry({ productId: product?.id ?? null, name, email, phone, message, details });
       setSubmitted(true);
     } catch {
       setSubmitError(true);

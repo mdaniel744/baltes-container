@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "@/lib/router";
 import { CheckCircle2, MapPin, Truck, ArrowLeft, ShoppingCart, Phone, MessageSquare, ArrowRight, ChevronDown } from "lucide-react";
 import { Image } from "@/components/ui/image";
-import { base44 } from "@/api/base44Client";
+import DOMPurify from "dompurify";
+import { fetchProductBySlug } from "@/lib/supabase/catalog";
 import { useLocale } from "@/lib/i18n/LocaleContext";
 import {
   formatCurrency,
@@ -24,9 +25,9 @@ export default function ProductDetail() {
   const [activeImage, setActiveImage] = useState(0);
 
   useEffect(() => {
-    base44.entities.Product.filter({ slug })
+    fetchProductBySlug(slug)
       .then((res) => {
-        if (res && res.length > 0) setProduct(res[0]);
+        if (res) setProduct(res);
       })
       .catch(() => {})
       .finally(() => setLoading(false));
@@ -219,7 +220,10 @@ export default function ProductDetail() {
               {t("product.description")}
               <ChevronDown className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180" aria-hidden="true" />
             </summary>
-            <p className="max-w-4xl px-5 pb-5 text-sm leading-relaxed text-muted-foreground">{localizedProduct.description}</p>
+            <div
+              className="max-w-4xl px-5 pb-5 text-sm leading-relaxed text-muted-foreground [&_p]:mb-3 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5"
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(localizedProduct.description) }}
+            />
           </details>
         )}
 

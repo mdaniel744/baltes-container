@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "@/lib/router";
 import { ArrowRight } from "lucide-react";
-import { base44 } from "@/api/base44Client";
+import { fetchFeaturedProducts } from "@/lib/supabase/catalog";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
 import { useLocale } from "@/lib/i18n/LocaleContext";
@@ -14,7 +14,7 @@ export default function PopularProducts() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    base44.entities.Product.filter({ featured: true }, "sku", 6)
+    fetchFeaturedProducts(6)
       .then(setProducts)
       .catch(() => setProducts([]))
       .finally(() => setLoading(false));
